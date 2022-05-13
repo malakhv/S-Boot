@@ -71,7 +71,7 @@ function env_setup() {
 
 # Build S-Boot
 function build() {
-    as src/$TARGET_ARCH/start.asm -o $OUT_DIR/sboot.o
+    as -msyntax=intel -mnaked-reg src/$TARGET_ARCH/start.asm -o $OUT_DIR/sboot.o
     ld -Ttext 0x7c00 --oformat=binary $OUT_DIR/sboot.o -o $OUT_DIR/sboot.bin
 }
 
