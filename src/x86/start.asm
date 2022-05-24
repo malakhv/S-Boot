@@ -9,7 +9,8 @@
 
 .code16                 # Using 16-bit code
 
-.text                   # Code segment
+// Code segment
+.text
     .globl _start;
 
 //
